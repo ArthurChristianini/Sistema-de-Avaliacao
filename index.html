@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+<link rel="script" href="./index.js">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(263, 64%, 30%); }
+    .attribution a {text-decoration: none;   }
+  </style>
+
+<script>
+ 
+  
+  function selecao (){
+    document.getElementById('b1').classList.add('selecionado')
+    document.getElementById('b2').classList.remove('selecionado')
+        document.getElementById('b3').classList.remove('selecionado')
+        document.getElementById('b4').classList.remove('selecionado')
+        document.getElementById('b5').classList.remove('selecionado')
+        var avaliacao = document.getElementById('b1').getAttribute('data-name')
+       document.getElementById('aaa').innerHTML = avaliacao
+       document.getElementById('aval').innerHTML = 'You selected 1 out of 5'
+  }
+  function selecao2 (){
+    document.getElementById('b2').classList.add('selecionado')
+    document.getElementById('b1').classList.remove('selecionado')
+        document.getElementById('b3').classList.remove('selecionado')
+        document.getElementById('b4').classList.remove('selecionado')
+        document.getElementById('b5').classList.remove('selecionado')
+        var avaliacao = document.getElementById('b2').getAttribute('data-name')
+        document.getElementById('aaa').innerHTML = avaliacao
+        document.getElementById('aval').innerHTML = 'You selected 2 out of 5'
+        
+  }
+  function selecao3 (){
+    document.getElementById('b3').classList.add('selecionado')
+    document.getElementById('b1').classList.remove('selecionado')
+        document.getElementById('b2').classList.remove('selecionado')
+        document.getElementById('b4').classList.remove('selecionado')
+        document.getElementById('b5').classList.remove('selecionado')
+        var avaliacao = document.getElementById('b3').getAttribute('data-name')
+        document.getElementById('aaa').innerHTML = avaliacao
+        document.getElementById('aval').innerHTML = 'You selected 3 out of 5'
+        
+  }
+  function selecao4 (){
+    document.getElementById('b4').classList.add('selecionado')
+    document.getElementById('b1').classList.remove('selecionado')
+        document.getElementById('b2').classList.remove('selecionado')
+        document.getElementById('b3').classList.remove('selecionado')
+        document.getElementById('b5').classList.remove('selecionado')
+        var avaliacao = document.getElementById('b4').getAttribute('data-name')
+        document.getElementById('aaa').innerHTML = avaliacao
+        document.getElementById('aval').innerHTML = 'You selected 4 out of 5'
+       
+  }
+  function selecao5 (){
+        document.getElementById('b5').classList.add('selecionado')
+        document.getElementById('b1').classList.remove('selecionado')
+        document.getElementById('b2').classList.remove('selecionado')
+        document.getElementById('b3').classList.remove('selecionado')
+        document.getElementById('b4').classList.remove('selecionado')
+        var avaliacao = document.getElementById('b5').getAttribute('data-name')
+        document.getElementById('aaa').innerHTML = avaliacao
+        document.getElementById('aval').innerHTML = 'You selected 5 out of 5'
+       
+
+  }
+
+  function condeu (){
+    document.getElementById('uiui').classList.add('condeu')
+    document.getElementById('valeu').classList.remove('condeu')
+  }
+
+
+
+
+
+</script>
+
+
+</head>
+<body>
+
+  <!-- Rating state start -->
+<div class="dale" id="uiui">
+  <img src="./images/icon-star.svg" alt="estrela" id="estrelapog">
+ 
+  <h1>How did we do?</h1>
+
+  <h2>Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</h2>
+  
+  <ul class="botoes">
+  <li onclick="selecao()" class="botao" id="b1" data-name="1">1 </li>
+  <li onclick="selecao2()" class="botao" id="b2" data-name="2">2 </li>
+  <li onclick="selecao3()" class="botao" id="b3" data-name="3">3 </li>
+  <li onclick="selecao4()" class="botao" id="b4" data-name="4">4 </li>
+  <li onclick="selecao5()" class="botao" id="b5" data-name="5">5 </li>
+  </ul> 
+
+  <p id="aaa"></p>
+
+  <h4 onclick="condeu()" id="botaosub">Submit</h4>
+
+</div>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <div class="dale condeu" id="valeu">
+    <img id="brigadao" src="./images/illustration-thank-you.svg" alt="brigado">
+    
+    <p id="aval">You selected  out of 5 </p>
+
+  <h1 id="titObrigado">Thank you!</h1>
+
+  <h2>We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch! </h2>
+</div>
+  <!-- Thank you state end -->
+
+  
+  <div id="final" class="attribution">
+    <p id="cabo">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </p>
+    <p id="cabo2"> Coded by <a href="https://github.com/ArthurChristianini">Arthur Christianini</a>.</p>
+</body>
+</html>
